@@ -1,23 +1,221 @@
-header
-	border-top 5px solid #212121
-	nav
+@media screen and (min-width: 0px)
+	section#slider
+		margin-top 75px
+	header
+		position fixed
+		left 0
+		right 0
+		border-top 5px solid #212121
+		background-color white
+		z-index 99
+		margin-top -75px
+		height 75px
+		transition height 0.3s ease-in-out, background-color 0.3s ease-in-out
+		-webkit-transition height 0.3s ease-in-out, background-color 0.3s ease-in-out
+		-moz-transition height 0.3s ease-in-out, background-color 0.3s ease-in-out
+		-o-transition height 0.3s ease-in-out, background-color 0.3s ease-in-out
+		nav
+			padding 2px 0
+		.logo
+			text-align center
+			position relative
+			.hamburger
+				display block
+				background-color #212121
+				transition background-color 0.3s ease-in-out
+				-webkit-transition background-color 0.3s ease-in-out
+				-moz-transition background-color 0.3s ease-in-out
+				-o-transition background-color 0.3s ease-in-out
+				width 24px
+				height 18px
+				position absolute
+				top 25px
+				left 25px
+				.burgers
+					position absolute
+					border-top 3px solid white
+					border-bottom 3px solid white
+					border-color white
+					top 4px
+					left 0
+					right 0
+					width 24px
+					height 4px
+					transition border-color 0.3s ease-in-out
+					-webkit-transition border-color 0.3s ease-in-out
+					-moz-transition border-color 0.3s ease-in-out
+					-o-transition border-color 0.3s ease-in-out
+			img 
+				max-height: 66px
+		.menuMobile
+			display none
+			background-color white
+			transition background-color 0.3s ease-in-out
+			-webkit-transition background-color 0.3s ease-in-out
+			-moz-transition background-color 0.3s ease-in-out
+			-o-transition background-color 0.3s ease-in-out
+			text-align center
+			&.opened
+				display block
+			ul
+				padding-bottom 10px
+				li
+					a
+						font-size 1.4rem
+						color #999
+						text-decoration none
+						line-height 2.5rem
+						transition color 0.3s ease-in-out
+						-webkit-transition color 0.3s ease-in-out
+						-moz-transition color 0.3s ease-in-out
+						-o-transition color 0.3s ease-in-out
+					:hover
+						color #212121
+						transition color 0.3s ease-in-out
+						-webkit-transition color 0.3s ease-in-out
+						-moz-transition color 0.3s ease-in-out
+						-o-transition color 0.3s ease-in-out
+		.menu
+			display none
+			text-align center
+			padding 5px 0
+			ul
+				li
+					padding 0 17px
+					list-style none
+					display inline-flex
+					a
+						text-decoration none
+						font-size 1.7rem
+						font-weight bold
+						color #999
+						transition color 0.3s ease-in-out
+						-webkit-transition color 0.3s ease-in-out
+						-moz-transition color 0.3s ease-in-out
+						-o-transition color 0.3s ease-in-out
+		&:after
+			content ""
+			display table
+			clear both
+	body.inverse
+		header
+			border-top 5px solid #212121
+			background-color #212121
+			.logo
+				.hamburger
+					background-color white
+					.burgers
+						border-top 3px solid #212121
+						border-bottom 3px solid #212121
+						border-color #212121
+			.menu
+				ul
+					li
+						a
+							color white
+			.menuMobile
+				background-color #212121
+				ul
+					li
+						a
+							color white
+						:hover
+							color #999
+@media screen and (min-width: 768px)
+	section#slider
+		margin-top 120px
+	header
+		border-top 5px solid #212121
+		margin-top -120px
+		height 120px
+		nav
+			padding 5px 0
+		.logo
+			text-align center
+			.hamburger
+				display none
+			img
+				max-height: 119px
+				transition max-height 0.3s ease-in-out
+				-webkit-transition max-height 0.3s ease-in-out
+				-moz-transition max-height 0.3s ease-in-out
+				-o-transition max-height 0.3s ease-in-out
+		.menuMobile
+			display none
+			&.opened
+				display none
+		.menu
+			display block
+			text-align center
+			padding 2px 0
+			transition padding 0.3s ease-in-out
+			-webkit-transition padding 0.3s ease-in-out
+			-moz-transition padding 0.3s ease-in-out
+			-o-transition padding 0.3s ease-in-out
+			ul
+				li
+					padding 0 17px
+					list-style none
+					display inline-flex
+					a
+						text-decoration none
+						font-size 1.7rem
+						font-weight bold
+		&:after
+			content ""
+			display table
+			clear both
+	body.inverse
+		section#slider
+			margin-top 96px
+		header
+			margin-top -96px
+			height 96px
+			nav
+				padding 0px 0
+			.logo
+				img 
+					max-height: 66px
+					transition max-height 0.3s ease-in-out
+					-webkit-transition max-height 0.3s ease-in-out
+					-moz-transition max-height 0.3s ease-in-out
+					-o-transition max-height 0.3s ease-in-out
+			.menu
+				padding 0px 0
+@media screen and (min-width: 1057px)
+	header
+		border-top 5px solid #212121
 		height 80px
-		padding 20px 0
-	.logo
-		float left
-		padding-left 50px
-	.menuMobile
-		display none
-	.menu
-		float right
-		padding 30px 50px 0 0
-		ul
-			li
-				padding 0 17px
-				list-style none
-				float left
-				a
-					text-decoration none
-					font-size 1.7rem
-					font-weight bold
-					color #999
+		nav
+			padding 20px 0
+		.logo
+			float left
+			padding-left 50px
+		.menuMobile
+			display none
+		.menu
+			display block
+			float right
+			padding 30px 50px 0 0
+			ul
+				li
+					padding 0 17px
+					list-style none
+					float left
+					a
+						text-decoration none
+						font-size 1.7rem
+						font-weight bold
+	body.inverse
+		section#slider
+			margin-top 70px
+		header
+			margin-top -70px
+			height 70px
+			nav
+				padding 0px 0
+			.logo
+				img 
+					max-height: 66px
+			.menu
+				padding 22px 50px 0 0

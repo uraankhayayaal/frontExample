@@ -27,26 +27,51 @@ a {
   max-width: 1200px;
   margin: 0 auto;
 }
-.row {
-  margin: 0 auto;
+@media screen and (min-width: 0px) {
+  .row {
+    margin: 0 auto;
+  }
+  .row .col {
+    float: left;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0 0rem;
+    min-height: 1px;
+  }
+  .row .col.s12 {
+    width: 100%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+  }
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 }
-.row .col {
-  float: left;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  padding: 0 0rem;
-  min-height: 1px;
-}
-.row .col.l6 {
-  width: 50%;
-  margin-left: auto;
-  left: auto;
-  right: auto;
-}
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+@media screen and (min-width: 768px) {
+  .row {
+    margin: 0 auto;
+  }
+  .row .col {
+    float: left;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0 0rem;
+    min-height: 1px;
+  }
+  .row .col.l6 {
+    width: 50%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+  }
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 }
 html {
   font-size: 10px;
@@ -63,34 +88,266 @@ h5,
 h6 {
   font-family: 'PT Sans' !important;
 }
-header {
-  border-top: 5px solid #212121;
+@media screen and (min-width: 0px) {
+  section#slider {
+    margin-top: 75px;
+  }
+  header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    border-top: 5px solid #212121;
+    background-color: #fff;
+    z-index: 99;
+    margin-top: -75px;
+    height: 75px;
+    transition: height 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    -webkit-transition: height 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    -moz-transition: height 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    -o-transition: height 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  }
+  header nav {
+    padding: 2px 0;
+  }
+  header .logo {
+    text-align: center;
+    position: relative;
+  }
+  header .logo .hamburger {
+    display: block;
+    background-color: #212121;
+    transition: background-color 0.3s ease-in-out;
+    -webkit-transition: background-color 0.3s ease-in-out;
+    -moz-transition: background-color 0.3s ease-in-out;
+    -o-transition: background-color 0.3s ease-in-out;
+    width: 24px;
+    height: 18px;
+    position: absolute;
+    top: 25px;
+    left: 25px;
+  }
+  header .logo .hamburger .burgers {
+    position: absolute;
+    border-top: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+    border-color: #fff;
+    top: 4px;
+    left: 0;
+    right: 0;
+    width: 24px;
+    height: 4px;
+    transition: border-color 0.3s ease-in-out;
+    -webkit-transition: border-color 0.3s ease-in-out;
+    -moz-transition: border-color 0.3s ease-in-out;
+    -o-transition: border-color 0.3s ease-in-out;
+  }
+  header .logo img {
+    max-height: 66px;
+  }
+  header .menuMobile {
+    display: none;
+    background-color: #fff;
+    transition: background-color 0.3s ease-in-out;
+    -webkit-transition: background-color 0.3s ease-in-out;
+    -moz-transition: background-color 0.3s ease-in-out;
+    -o-transition: background-color 0.3s ease-in-out;
+    text-align: center;
+  }
+  header .menuMobile.opened {
+    display: block;
+  }
+  header .menuMobile ul {
+    padding-bottom: 10px;
+  }
+  header .menuMobile ul li a {
+    font-size: 1.4rem;
+    color: #999;
+    text-decoration: none;
+    line-height: 2.5rem;
+    transition: color 0.3s ease-in-out;
+    -webkit-transition: color 0.3s ease-in-out;
+    -moz-transition: color 0.3s ease-in-out;
+    -o-transition: color 0.3s ease-in-out;
+  }
+  header .menuMobile ul li :hover {
+    color: #212121;
+    transition: color 0.3s ease-in-out;
+    -webkit-transition: color 0.3s ease-in-out;
+    -moz-transition: color 0.3s ease-in-out;
+    -o-transition: color 0.3s ease-in-out;
+  }
+  header .menu {
+    display: none;
+    text-align: center;
+    padding: 5px 0;
+  }
+  header .menu ul li {
+    padding: 0 17px;
+    list-style: none;
+    display: inline-flex;
+  }
+  header .menu ul li a {
+    text-decoration: none;
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: #999;
+    transition: color 0.3s ease-in-out;
+    -webkit-transition: color 0.3s ease-in-out;
+    -moz-transition: color 0.3s ease-in-out;
+    -o-transition: color 0.3s ease-in-out;
+  }
+  header:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  body.inverse header {
+    border-top: 5px solid #212121;
+    background-color: #212121;
+  }
+  body.inverse header .logo .hamburger {
+    background-color: #fff;
+  }
+  body.inverse header .logo .hamburger .burgers {
+    border-top: 3px solid #212121;
+    border-bottom: 3px solid #212121;
+    border-color: #212121;
+  }
+  body.inverse header .menu ul li a {
+    color: #fff;
+  }
+  body.inverse header .menuMobile {
+    background-color: #212121;
+  }
+  body.inverse header .menuMobile ul li a {
+    color: #fff;
+  }
+  body.inverse header .menuMobile ul li :hover {
+    color: #999;
+  }
 }
-header nav {
-  height: 80px;
-  padding: 20px 0;
+@media screen and (min-width: 768px) {
+  section#slider {
+    margin-top: 120px;
+  }
+  header {
+    border-top: 5px solid #212121;
+    margin-top: -120px;
+    height: 120px;
+  }
+  header nav {
+    padding: 5px 0;
+  }
+  header .logo {
+    text-align: center;
+  }
+  header .logo .hamburger {
+    display: none;
+  }
+  header .logo img {
+    max-height: 119px;
+    transition: max-height 0.3s ease-in-out;
+    -webkit-transition: max-height 0.3s ease-in-out;
+    -moz-transition: max-height 0.3s ease-in-out;
+    -o-transition: max-height 0.3s ease-in-out;
+  }
+  header .menuMobile {
+    display: none;
+  }
+  header .menuMobile.opened {
+    display: none;
+  }
+  header .menu {
+    display: block;
+    text-align: center;
+    padding: 2px 0;
+    transition: padding 0.3s ease-in-out;
+    -webkit-transition: padding 0.3s ease-in-out;
+    -moz-transition: padding 0.3s ease-in-out;
+    -o-transition: padding 0.3s ease-in-out;
+  }
+  header .menu ul li {
+    padding: 0 17px;
+    list-style: none;
+    display: inline-flex;
+  }
+  header .menu ul li a {
+    text-decoration: none;
+    font-size: 1.7rem;
+    font-weight: bold;
+  }
+  header:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  body.inverse section#slider {
+    margin-top: 96px;
+  }
+  body.inverse header {
+    margin-top: -96px;
+    height: 96px;
+  }
+  body.inverse header nav {
+    padding: 0px 0;
+  }
+  body.inverse header .logo img {
+    max-height: 66px;
+    transition: max-height 0.3s ease-in-out;
+    -webkit-transition: max-height 0.3s ease-in-out;
+    -moz-transition: max-height 0.3s ease-in-out;
+    -o-transition: max-height 0.3s ease-in-out;
+  }
+  body.inverse header .menu {
+    padding: 0px 0;
+  }
 }
-header .logo {
-  float: left;
-  padding-left: 50px;
-}
-header .menuMobile {
-  display: none;
-}
-header .menu {
-  float: right;
-  padding: 30px 50px 0 0;
-}
-header .menu ul li {
-  padding: 0 17px;
-  list-style: none;
-  float: left;
-}
-header .menu ul li a {
-  text-decoration: none;
-  font-size: 1.7rem;
-  font-weight: bold;
-  color: #999;
+@media screen and (min-width: 1057px) {
+  header {
+    border-top: 5px solid #212121;
+    height: 80px;
+  }
+  header nav {
+    padding: 20px 0;
+  }
+  header .logo {
+    float: left;
+    padding-left: 50px;
+  }
+  header .menuMobile {
+    display: none;
+  }
+  header .menu {
+    display: block;
+    float: right;
+    padding: 30px 50px 0 0;
+  }
+  header .menu ul li {
+    padding: 0 17px;
+    list-style: none;
+    float: left;
+  }
+  header .menu ul li a {
+    text-decoration: none;
+    font-size: 1.7rem;
+    font-weight: bold;
+  }
+  body.inverse section#slider {
+    margin-top: 70px;
+  }
+  body.inverse header {
+    margin-top: -70px;
+    height: 70px;
+  }
+  body.inverse header nav {
+    padding: 0px 0;
+  }
+  body.inverse header .logo img {
+    max-height: 66px;
+  }
+  body.inverse header .menu {
+    padding: 22px 50px 0 0;
+  }
 }
 footer {
   background-color: #020202;
