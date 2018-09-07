@@ -1,66 +1,84 @@
-<!-- В работе будет использоваться javascript-библиотека Jquery, которая распространяется по лицензии MIT: https://jquery.org/license/ -->
-
 <!DOCTYPE html>
 <html lang="en">
 	<head>
   		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   		<meta name="viewport" content="width=device-width, initial-scale=1"/>
-  		<title>MyTona - Главная</title>
+  		<title>MyTona - Home</title>
 
   		<!-- CSS  -->
   		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Maven+Pro:400,700&subset=latin,latin-ext">
-  		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Playfair+Display:400,700,400italic,700italic&subset=latin,latin-ext">
-  		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,300,200,700&subset=latin,latin-ext">
-  		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&subset=latin,latin-ext">
-  		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&subset=latin,latin-ext">
-  		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700&subset=latin,latin-ext">
-  		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&subset=latin,latin-ext">
-  		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700&subset=latin,latin-ext">
-  		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&subset=latin,latin-ext">
   		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&subset=latin,latin-ext">
   		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  		<link rel="stylesheet" type="text/css" media="screen,projection" href="./css/index.css"/>
-  		<link rel="stylesheet" type="text/css" media="screen,projection" href="./css/owl/owl.carousel.min.css"/>
-  		<link rel="stylesheet" type="text/css" media="screen,projection" href="./css/owl/owl.theme.default.min.css"/>
-  		<link rel="stylesheet" type="text/css" media="screen,projection" href="./css/owl/custom.css"/>
+  		<link rel="stylesheet" type="text/css" href="./css/owl/owl.carousel.min.css"/>
+  		<link rel="stylesheet" type="text/css" href="./css/owl/owl.theme.default.min.css"/>
+  		<link rel="stylesheet" type="text/css" href="./css/owl/custom.css"/>
+  		<link rel="stylesheet" type="text/css" href="./css/index.css"/>
 	</head>
 	<body>
 		<header>
 			<nav class="navigation">
 				<div class="logo">
-					<span class="hamburger" onclick="clickBurger()"><span class="burgers"></span></span>
+					<span class="hamburger"><span class="burgers"></span></span>
 					<img src="./images/logo.png" alt="Mytona games">
 				</div>
 				<div class="menu">
 					<ul>
-						<li><a href="#">GAMES</a></li>
+						<li class="dropdown"><a href="#">GAMES</a>
+							<ul>
+								<li><a href="#">SEEKERS NOTES</a></li>
+								<li><a href="#">COOKING DIARY</a></li>
+								<li><a href="#">RAVENHILL: HIDDEN MYSTERY</a></li>
+								<li><a href="#">THE SECRET SOCIETY</a></li>
+							</ul>
+						</li>
 						<li><a href="#">NEWS</a></li>
 						<li><a href="#">CAREER</a></li>
 						<li><a href="#">COMPANY</a></li>
 						<li><a href="#">CONTACT</a></li>
-						<li><a href="#">SUPPORT</a></li>
+						<li class="dropdown right"><a href="#">SUPPORT</a>
+							<ul>
+								<li><a href="#">SEEKERS NOTES</a></li>
+								<li><a href="#">COOKING DIARY</a></li>
+								<li><a href="#">RAVENHILL: HIDDEN MYSTERY</a></li>
+							</ul>
+						</li>
 					</ul>
 				</div>
 				<div class="menuMobile">
 					<ul>
-						<li><a href="#">GAMES</a></li>
+						<li class="dropdown"><a href="#">GAMES</a>
+							<ul class="show2">
+								<li><a class="back" href="#">BACK</a></li>
+								<li><a href="#">SEEKERS NOTES</a></li>
+								<li><a href="#">COOKING DIARY</a></li>
+								<li><a href="#">RAVENHILL: HIDDEN MYSTERY</a></li>
+								<li><a href="#">THE SECRET SOCIETY</a></li>
+							</ul>
+						</li>
 						<li><a href="#">NEWS</a></li>
 						<li><a href="#">CAREER</a></li>
 						<li><a href="#">COMPANY</a></li>
 						<li><a href="#">CONTACT</a></li>
-						<li><a href="#">SUPPORT</a></li>
+						<li class="dropdown"><a href="#">SUPPORT</a>
+							<ul>
+								<li><a class="back" href="#">BACK</a></li>
+								<li><a href="#">SEEKERS NOTES</a></li>
+								<li><a href="#">COOKING DIARY</a></li>
+								<li><a href="#">RAVENHILL: HIDDEN MYSTERY</a></li>
+							</ul>
+						</li>
 					</ul>
 				</div>
 			</nav>
 		</header>
   
-		<section id="slider" class="owl-carousel owl-theme">
+		<div id="slider" class="owl-carousel owl-theme">
 			<div class="item"><a href="#"><img src="./images/banners/b1.jpg" alt="Mytona games"></a></div>
 			<div class="item"><a href="#"><img src="./images/banners/b2.jpg" alt="Mytona games"></a></div>
 			<div class="item"><a href="#"><img src="./images/banners/b3.jpg" alt="Mytona games"></a></div>
 			<div class="item"><a href="#"><img src="./images/banners/b4.jpg" alt="Mytona games"></a></div>
 			<div class="item"><a href="#"><img src="./images/banners/b5.png" alt="Mytona games"></a></div>
-		</section>
+		</div>
 
 		<section id="whoWeAre">
 			<p class="welcome"><img src="./images/welcome.png" alt="Mytona games"></p>
@@ -124,31 +142,31 @@
 						<form action="mail.php" method="POST">
 							<div class="formInput">
 								<label for="name">Name <span class="red">*</span></label>
-								<input type="text" name="name" class="name" required>
+								<input type="text" id="name" name="name" class="name" required>
 							</div>
 							<div class="formInput">
 								<label for="name">Subject <span class="red">*</span></label>
-								<input type="text" name="subject" required>
+								<input type="text" id="subject" name="subject" required>
 							</div>
 							<div class="formInput">
 								<label for="name">Phone Number <span class="red">*</span></label>
-								<input type="text" name="phone" required>
+								<input type="text" id="phone" name="phone" required>
 							</div>
 							<div class="formInput">
 								<label for="name">Email <span class="red">*</span></label>
-								<input type="email" name="email" required>
+								<input type="email" id="email" name="email" required>
 							</div>
 							<div class="formInput">
 								<label for="name">Comment <span class="red">*</span></label>
-								<textarea name="comment" required></textarea>
+								<textarea id="comment" name="comment" required></textarea>
 							</div>
 							<div class="formInput">
 								<label for="name">Additional information (a brief resume, a link to a resume / portfolio or other) <span class="red">*</span></label>
-								<textarea name="additional" required></textarea>
+								<textarea id="additional" name="additional" required></textarea>
 							</div>
 							<div class="formInput">
 								<label for="name">Required check <span class="red">*</span></label>
-								<input type="hidden" name="confirm" id="confirm" value="0">
+								<input type="hidden" id="confirm" name="confirm" value="0">
 								<span class="checkbox">Please, check this box to confirm you have read and accept our Privacy Policy</span>
 								<br />
 								<br />
@@ -184,14 +202,6 @@
     			<p>© 2017-2018 MyTona. All Rights Reserved.</p>
     		</div>
   		</footer>
-
-  		<!--  Toasts-->
-		<!-- <div class="toast">
-			<p>This site uses cookies to personalize your experience, analyze site usage, and offer tailored promotions.</p>
-			<a href="#">Напомни мне позже</a>
-			<a href="#">www.youronlinechoices.eu</a>
-			<a href="#" class="btn">I accept</a>
-		</div> -->
 
   		<!--  Scripts-->
   		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

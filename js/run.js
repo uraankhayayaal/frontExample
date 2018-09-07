@@ -5,6 +5,9 @@ $(function() {
 	    nav:true,
 	    items:1,
 	    dots:false,
+	    autoplay:true,
+	    autoplayTimeout:5000,
+	    autoplayHoverPause:true
 	});
 	$(window).scroll(function (event) {
 	    var scroll = $(window).scrollTop();
@@ -15,11 +18,15 @@ $(function() {
 	    }
 	});
 });
-
-function clickBurger(){
+$( ".hamburger" ).on( "click", function() {
 	$( ".menuMobile" ).slideToggle();
-}
-
+});
+$( ".menuMobile .dropdown > a" ).on( "click", function() {
+  	$( this ).next("ul" ).addClass('show');
+});
+$( ".menuMobile .dropdown > ul > li > a.back" ).on( "click", function() {
+  	$( this ).closest(".dropdown").find("ul").removeClass('show');
+});
 $( "span.checkbox" ).on( "click", function() {
   	$( this ).toggleClass('checked');
 	if ($(this).hasClass('checked')) {
@@ -29,13 +36,10 @@ $( "span.checkbox" ).on( "click", function() {
       	$("input#confirm").val(0);
    	}
 });
-
-
 $("form").submit(function(event) {
     event.preventDefault();
     var $form = $( this ),
         url = $form.attr( 'action' );
-
     if(!$( "span.checkbox" ).hasClass('checked')){
     	$( "span.checkbox" ).closest('.formInput').addClass('error');
     }else{

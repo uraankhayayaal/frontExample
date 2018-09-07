@@ -1,6 +1,10 @@
 @media screen and (min-width: 0px)
-	section#slider
+	div#slider
 		margin-top 75px
+		transition height 0.3s ease-in-out, margin 0.3s ease-in-out
+		-webkit-transition height 0.3s ease-in-out, margin 0.3s ease-in-out
+		-moz-transition height 0.3s ease-in-out, margin 0.3s ease-in-out
+		-o-transition height 0.3s ease-in-out, margin 0.3s ease-in-out
 	header
 		position fixed
 		left 0
@@ -8,7 +12,7 @@
 		border-top 5px solid #212121
 		background-color white
 		z-index 99
-		margin-top -75px
+		top 0
 		height 75px
 		transition height 0.3s ease-in-out, background-color 0.3s ease-in-out
 		-webkit-transition height 0.3s ease-in-out, background-color 0.3s ease-in-out
@@ -58,6 +62,7 @@
 			&.opened
 				display block
 			ul
+				position relative
 				padding-bottom 10px
 				li
 					a
@@ -75,6 +80,27 @@
 						-webkit-transition color 0.3s ease-in-out
 						-moz-transition color 0.3s ease-in-out
 						-o-transition color 0.3s ease-in-out
+					&.dropdown
+						> a::after
+							content ">"
+							font-size 1.2rem
+							margin-left 5px
+						> ul
+							display none
+							position absolute
+							background-color white
+							height 100%
+							top 0
+							left 0
+							right 0
+							text-align center
+							z-index 2
+							&.show
+								display block
+								a.back::before
+									content "<"
+									font-size 1.2rem
+									margin-right 5px
 		.menu
 			display none
 			text-align center
@@ -92,13 +118,40 @@
 						-webkit-transition color 0.3s ease-in-out
 						-moz-transition color 0.3s ease-in-out
 						-o-transition color 0.3s ease-in-out
+				li.dropdown
+					position relative
+					> ul
+						display none
+						position absolute
+						top 0
+						text-align left
+						left -5px
+						transition top 0.3s ease-in-out
+						-webkit-transition top 0.3s ease-in-out
+						-moz-transition top 0.3s ease-in-out
+						-o-transition top 0.3s ease-in-out
+						a
+							background-color #5d5d5d
+							padding 10px 20px
+							font-size 1.2rem
+							color white
+							width 200px
+							&:hover
+								background-color #99cc00
+					&.right
+						> ul
+							left auto
+							right -5px
+				li.dropdown:hover
+					> ul
+						display block
+						top 100%
 		&:after
 			content ""
 			display table
 			clear both
 	body.inverse
 		header
-			border-top 5px solid #212121
 			background-color #212121
 			.logo
 				.hamburger
@@ -121,14 +174,17 @@
 						:hover
 							color #999
 @media screen and (min-width: 768px)
-	section#slider
+	div#slider
 		margin-top 120px
 	header
 		border-top 5px solid #212121
-		margin-top -120px
 		height 120px
 		nav
 			padding 5px 0
+			transition padding 0.3s ease-in-out
+			-webkit-transition padding 0.3s ease-in-out
+			-moz-transition padding 0.3s ease-in-out
+			-o-transition padding 0.3s ease-in-out
 		.logo
 			text-align center
 			.hamburger
@@ -164,10 +220,9 @@
 			display table
 			clear both
 	body.inverse
-		section#slider
+		div#slider
 			margin-top 96px
 		header
-			margin-top -96px
 			height 96px
 			nav
 				padding 0px 0
@@ -182,8 +237,6 @@
 				padding 0px 0
 @media screen and (min-width: 1057px)
 	header
-		border-top 5px solid #212121
-		height 80px
 		nav
 			padding 20px 0
 		.logo
@@ -204,10 +257,9 @@
 						text-decoration none
 						font-size 1.7rem
 	body.inverse
-		section#slider
+		div#slider
 			margin-top 70px
 		header
-			margin-top -70px
 			height 70px
 			nav
 				padding 0px 0
