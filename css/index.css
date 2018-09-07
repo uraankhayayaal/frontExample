@@ -163,7 +163,7 @@ h6 {
     font-size: 1.4rem;
     color: #999;
     text-decoration: none;
-    line-height: 2.5rem;
+    line-height: 3rem;
     transition: color 0.3s ease-in-out;
     -webkit-transition: color 0.3s ease-in-out;
     -moz-transition: color 0.3s ease-in-out;
@@ -189,7 +189,6 @@ h6 {
   header .menu ul li a {
     text-decoration: none;
     font-size: 1.7rem;
-    font-weight: bold;
     color: #999;
     transition: color 0.3s ease-in-out;
     -webkit-transition: color 0.3s ease-in-out;
@@ -252,7 +251,7 @@ h6 {
     -o-transition: max-height 0.3s ease-in-out;
   }
   header .menuMobile {
-    display: none;
+    display: none !important;
   }
   header .menuMobile.opened {
     display: none;
@@ -274,7 +273,6 @@ h6 {
   header .menu ul li a {
     text-decoration: none;
     font-size: 1.7rem;
-    font-weight: bold;
   }
   header:after {
     content: "";
@@ -315,7 +313,7 @@ h6 {
     padding-left: 50px;
   }
   header .menuMobile {
-    display: none;
+    display: none !important;
   }
   header .menu {
     display: block;
@@ -330,7 +328,6 @@ h6 {
   header .menu ul li a {
     text-decoration: none;
     font-size: 1.7rem;
-    font-weight: bold;
   }
   body.inverse section#slider {
     margin-top: 70px;
@@ -437,7 +434,7 @@ section#vacancy .p {
 }
 section#callback {
   text-align: center;
-  padding: 180px 0;
+  padding: 180px 0 80px 0;
   color: #2a2a2a;
   font-size: 2.1rem;
 }
@@ -448,4 +445,89 @@ section#callback h3 {
 section#callback .p {
   font-weight: bold;
   margin-bottom: 20px;
+}
+section#callback img {
+  width: 100%;
+  margin: 0 7px;
+}
+section#callback form {
+  padding: 0 15px;
+}
+section#callback form .formInput {
+  margin-top: 15px;
+  text-align: left;
+}
+section#callback form .formInput label {
+  display: block;
+  text-align: left;
+  font-size: 1.9rem;
+  line-height: 2.7rem;
+  font-weight: bold;
+  max-width: 400px;
+}
+section#callback form .formInput label .red {
+  color: #f00;
+}
+section#callback form .formInput input,
+section#callback form .formInput textarea {
+  display: block;
+  width: 100%;
+  max-width: 370px;
+  box-sizing: border-box;
+  font-size: 2rem;
+  padding: 10px 2px;
+  outline-style: none;
+  margin-top: 5px;
+}
+section#callback form .formInput input.name,
+section#callback form .formInput textarea.name {
+  max-width: 200px;
+}
+section#callback form .formInput input:active,
+section#callback form .formInput textarea:active {
+  border: 2px solid #2a2a2a;
+}
+section#callback form .formInput input:focus,
+section#callback form .formInput textarea:focus {
+  border: 2px solid #2a2a2a;
+}
+section#callback form .formInput textarea {
+  height: 200px;
+}
+section#callback form .formInput span.checkbox {
+  cursor: pointer;
+}
+section#callback form .formInput span.checkbox:before {
+  background-image: url("../images/unchecked.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  content: '';
+  display: inline-block;
+  height: 22px;
+  width: 22px;
+  margin-right: 8px;
+  padding: 1px;
+  vertical-align: -8px;
+}
+section#callback form .formInput span.checkbox.checked:before {
+  background-image: url("../images/checked.png");
+}
+section#callback form .formInput.error {
+  border: 2px solid #f00;
+}
+section#callback form .formInput .policy {
+  font-size: 1.6rem;
+}
+section#callback form button.btn {
+  display: block;
+  line-height: normal;
+}
+section#callback form div.success {
+  max-width: 400px;
+  text-align: left;
+  font-family: 'Maven Pro', sans-serif;
+  line-height: 4rem;
+  font-size: 1.5rem;
+  color: #222;
+  font-weight: normal;
 }

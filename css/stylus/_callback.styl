@@ -1,6 +1,6 @@
 section#callback
 	text-align center
-	padding 180px 0
+	padding 180px 0 80px 0
 	color #2a2a2a
 	font-size 2.1rem
 	h3
@@ -9,4 +9,70 @@ section#callback
 	.p
 		font-weight bold
 		margin-bottom 20px
+	img
+		width 100%
+		margin 0 7px
+	form
+		padding 0 15px
+		.formInput
+			margin-top 15px
+			text-align left
+			label
+				display block
+				text-align left
+				font-size 1.9rem
+				line-height 2.7rem
+				font-weight bold
+				max-width 400px
+				.red
+					color red
+			input, textarea
+				display block
+				width 100%
+				max-width 370px
+				box-sizing border-box
+				font-size 2rem
+				padding 10px 2px
+				outline-style none
+				margin-top 5px
+				&.name
+					max-width 200px
+				&:active
+					border 2px solid #2a2a2a
+				&:focus
+					border 2px solid #2a2a2a
+			textarea
+				height 200px
+			span.checkbox
+				cursor pointer
+				&:before
+					background-image url(../images/unchecked.png)
+					background-position center
+					background-repeat no-repeat
+					content ''
+					display inline-block
+					height 22px
+					width 22px
+					margin-right 8px
+					padding 1px
+					vertical-align -8px
+				&.checked
+					&:before
+						background-image url(../images/checked.png)
+			&.error
+				border 2px solid red
+			.policy
+				font-size 1.6rem
+		button.btn
+			display block
+			line-height normal
+		div.success
+			max-width 400px
+			text-align left
+			font-family 'Maven Pro', sans-serif
+			line-height 4rem
+			font-size 1.5rem
+			color #222222
+			font-weight normal
+				
 

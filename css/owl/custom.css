@@ -49,3 +49,6 @@
     -ms-user-select: none;
     user-select: none;
 }
+.owl-theme .owl-nav{
+    margin-top: 0px;
+}
